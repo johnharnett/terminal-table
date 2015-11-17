@@ -570,27 +570,6 @@ module Terminal
  c     7  8  9
       EOF
     end
-    it "should render a Cartesian Product" do
-     table = Terminal::CartesianTable.new
-      table.style = {:border_x => "", :border_y => "", :border_i => ""}
-#      table.vertical_separator = {column: 1,character: "|"}
-#      table.heading_separator = {character: "-",origin_character: "+"}
-
-      table.headings = ['', 2,3,5]
-#      table.add_heading_separator
-      table << ['2', 4, 6, 10]
-      table <<  ['3', 6, 9, 15]
-       table << ['5', 10, 15, 25]
-      puts table.render
-
-      table.render.should == <<-EOF
-   |  2  3  5
----+---------
- 2 |  4  6 10
- 3 |  6  9 15
- 5 |  10 15 25
-      EOF
-    end
 
     it "should render a table with all separators" do
       @table.style = {:all_separators => true}

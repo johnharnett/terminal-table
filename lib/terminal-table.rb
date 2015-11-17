@@ -21,6 +21,6 @@
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #++
 
-%w(cell row cartesian_row separator style table table_helper version cartesian_table cartesian_separator).each do |file|
+%w(cell row cartesian_cell cartesian_row separator style table table_helper version cartesian_table cartesian_separator y_column_cell).each do |file|
   require "terminal-table/#{file}"
 end
